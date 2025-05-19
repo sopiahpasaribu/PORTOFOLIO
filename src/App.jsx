@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const projects = [
+    {
+      title: "Portfolio Website",
+      desc: "A personal portfolio to showcase my projects and skills.",
+      tech: ["React", "TailwindCSS"],
+      link: "https://github.com/sopiah/portfolio",
+    },
+    {
+      title: "E-commerce Site",
+      desc: "An online store with full shopping cart functionality.",
+      tech: ["React", "Redux", "Firebase"],
+      link: "https://github.com/sopiah/ecommerce",
+    },
+    {
+      title: "Blog Platform",
+      desc: "A responsive blog platform with markdown support.",
+      tech: ["Next.js", "TailwindCSS", "MongoDB"],
+      link: "https://github.com/sopiah/blog",
+    },
+  ];
+
   return (
     <div className="relative font-sans text-gray-800">
       <Navbar />
@@ -13,22 +43,24 @@ function App() {
           id="home"
           className="min-h-screen flex flex-col justify-center items-center text-center"
           style={{
-            backgroundColor: "#E9E1D1", // warna cream polos
+            backgroundColor: "#E9E1D1",
             transition: "all 0.5s ease",
           }}
+          data-aos="fade-up"
         >
           <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
             <img
-              src="public/1.jpg"
+              src="/1.jpg"
               alt="Sopiah Profile"
               className="w-40 h-40 rounded-full object-cover shadow-lg"
+              data-aos="zoom-in"
             />
             <div>
               <h2 className="text-4xl font-display font-bold text-[#6B4C3B] mb-4">
                 Hello, I'm Sopiah
               </h2>
               <p className="text-[#7B6F61] max-w-xl">
-                I'm a passionate{" "}
+                I'm a passionate {" "}
                 <span className="text-[#6B4C3B] font-semibold">
                   Frontend Developer
                 </span>{" "}
@@ -44,116 +76,67 @@ function App() {
           </div>
         </section>
 
-<section
-  id="about"
-  className="min-h-screen flex items-center justify-center bg-[#3e2c23] px-6 py-16"
->
-  <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12 text-[#f5e5d1]">
-    {/* FOTO */}
-    <img
-      src="public/aboutme.jpg"
-      alt="About Sopiah"
-      className="w-64 h-64 object-cover rounded-md shadow-lg"
-    />
+        {/* About Section */}
+        <section
+          id="about"
+          className="min-h-screen flex items-center justify-center bg-[#3e2c23] px-6 py-16"
+          data-aos="fade-up"
+        >
+          <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12 text-[#f5e5d1]">
+            <img
+              src="/aboutme.jpg"
+              alt="About Sopiah"
+              className="w-64 h-64 object-cover rounded-md shadow-lg"
+              data-aos="zoom-in"
+            />
 
-    {/* ISI TEKS */}
-    <div className="flex-1">
-      <p className="text-[#d1a374] uppercase text-sm font-semibold mb-1">
-        Discover
-      </p>
-      <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-        About Me
-      </h2>
-      <p className="text-sm text-[#f5e5d1] leading-relaxed mb-6">
-        My name is Sopiah. I’m a React Developer with over 3 years of experience building modern web apps. I’m very passionate and dedicated to my work. I have acquired the skills necessary to build clean, premium, and responsive websites.
-      </p>
+            <div className="flex-1">
+              <p className="text-[#d1a374] uppercase text-sm font-semibold mb-1">
+                Discover
+              </p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                About Me
+              </h2>
+              <p className="text-sm text-[#f5e5d1] leading-relaxed mb-6">
+                My name is Sopiah. I’m a React Developer with over 2 years of experience
+                building modern web apps. I’m very passionate and dedicated to my work. I
+                have acquired the skills necessary to build clean, premium, and responsive
+                websites.
+              </p>
 
-      {/* INFO BOX */}
-      <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 border border-[#d1a374] p-6 mb-6">
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Name:</span> Sopiah
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Age:</span> 23
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Phone:</span> +62 812-3456-7890
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Address:</span> Bandung, Indonesia
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Experience:</span> 3 Years
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Freelance:</span> Available
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">Skype:</span> sopiah.dev
-        </p>
-        <p>
-          <span className="font-semibold text-[#f5e5d1]">GitHub:</span> github.com/sopiah
-        </p>
-      </div>
+              <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 border border-[#d1a374] p-6 mb-6">
+                <p><span className="font-semibold">Name:</span> Sopiah Pasaribu</p>
+                <p><span className="font-semibold">Age:</span> 21</p>
+                <p><span className="font-semibold">Phone:</span> +62 831-3591-0632</p>
+                <p><span className="font-semibold">Address:</span> Bandung, Indonesia</p>
+                <p><span className="font-semibold">Experience:</span> 2 Years</p>
+                <p><span className="font-semibold">Freelance:</span> Available</p>
+                <p><span className="font-semibold">Skype:</span> sopiah.dev</p>
+                <p><span className="font-semibold">GitHub:</span> github.com/sopiah</p>
+              </div>
 
-      {/* BUTTON */}
-      <button className="bg-[#d1a374] text-[#3e2c23] font-display text-sm font-semibold px-6 py-3 rounded hover:bg-[#b98d5c] transition">
-        Download CV
-      </button>
-    </div>
-  </div>
-</section>
+              <button className="bg-[#d1a374] text-[#3e2c23] font-display text-sm font-semibold px-6 py-3 rounded hover:bg-[#b98d5c] transition">
+                Download CV
+              </button>
+            </div>
+          </div>
+        </section>
 
         {/* Projects Section */}
         <section
           id="projects"
           className="min-h-screen flex flex-col justify-center items-center text-center px-4"
+          data-aos="fade-up"
         >
           <h2 className="text-4xl font-display font-bold text-[#6B4C3B] mb-8">
             Projects
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl">
-            {[
-              {
-                title: "React Todo App",
-                desc: "A fully functional todo list app built with React and Tailwind CSS, featuring CRUD operations and local storage persistence.",
-                tech: ["React", "Tailwind CSS", "JavaScript"],
-                link: "https://github.com/sopiah/react-todo-app",
-              },
-              {
-                title: "Personal Portfolio Website",
-                desc: "My portfolio built with React and Vite, showcasing my skills, projects, and blog posts with smooth animations.",
-                tech: ["React", "Vite", "CSS Modules"],
-                link: "https://sopiah-portfolio.com",
-              },
-              {
-                title: "E-commerce UI Template",
-                desc: "A modern, responsive e-commerce frontend design using React and Tailwind CSS, optimized for mobile and desktop.",
-                tech: ["React", "Tailwind CSS", "Figma (Design)"],
-                link: "https://github.com/sopiah/ecommerce-ui",
-              },
-              {
-                title: "HTML5 & CSS3 Landing Page",
-                desc: "A clean, semantic landing page built with pure HTML5 and CSS3, featuring responsive design and smooth scroll effects.",
-                tech: ["HTML5", "CSS3", "JavaScript"],
-                link: "https://github.com/sopiah/html5-landing-page",
-              },
-              {
-                title: "JavaScript Game - Memory Match",
-                desc: "A classic memory card matching game developed using vanilla JavaScript with simple animations and scoring system.",
-                tech: ["JavaScript", "HTML", "CSS"],
-                link: "https://github.com/sopiah/js-memory-game",
-              },
-              {
-                title: "Blog CMS with Next.js",
-                desc: "A content-managed blog platform built with Next.js and Markdown files, with static site generation and SEO optimization.",
-                tech: ["Next.js", "React", "Markdown"],
-                link: "https://github.com/sopiah/nextjs-blog-cms",
-              },
-            ].map(({ title, desc, tech, link }, index) => (
+            {projects.map(({ title, desc, tech, link }, index) => (
               <div
                 key={index}
                 className="bg-[#F5F0E6] rounded-xl shadow-md p-6 hover:shadow-lg transition flex flex-col justify-between"
+                data-aos="fade-up"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-[#6B4C3B] mb-2">
@@ -188,6 +171,7 @@ function App() {
         <section
           id="contact"
           className="min-h-screen flex flex-col justify-center items-center text-center px-6 sm:px-12"
+          data-aos="fade-up"
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#6B4C3B] mb-6">
             Contact Me
@@ -199,14 +183,13 @@ function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 mb-6">
-            {/* Image Profil */}
             <img
-              src="https://avatars.githubusercontent.com/u/00000000?v=4" // Ganti dengan link gambar kamu
+              src="https://avatars.githubusercontent.com/u/00000000?v=4"
               alt="Sopiah Profile"
               className="w-20 h-20 rounded-full border-4 border-[#6B4C3B] object-cover shadow-lg"
+              data-aos="zoom-in"
             />
 
-            {/* Tombol Email */}
             <a
               href="mailto:sopiah@example.com"
               className="bg-[#6B4C3B] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#8B6E56] transition text-base sm:text-lg font-semibold flex items-center gap-2"
@@ -214,16 +197,10 @@ function App() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 12h2a2 2 0 012 2v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5a2 2 0 012-2h2m4 0V8m0 4l-4-4m4 4l4-4"
-                />
+                <path d="M2.94 6.94a1.5 1.5 0 0 1 2.12 0L10 11.88l4.94-4.94a1.5 1.5 0 1 1 2.12 2.12l-6 6a1.5 1.5 0 0 1-2.12 0l-6-6a1.5 1.5 0 0 1 0-2.12z" />
               </svg>
               Say Hello
             </a>
@@ -233,28 +210,13 @@ function App() {
             Or find me on social media:
           </p>
           <div className="flex space-x-6 text-[#6B4C3B] text-base sm:text-lg font-semibold">
-            <a
-              href="https://github.com/sopiah"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#A9746E] transition duration-300"
-            >
+            <a href="https://github.com/sopiah" target="_blank" rel="noopener noreferrer" className="hover:text-[#A9746E] transition duration-300">
               GitHub
             </a>
-            <a
-              href="https://linkedin.com/in/sopiah"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#A9746E] transition duration-300"
-            >
+            <a href="https://linkedin.com/in/sopiah" target="_blank" rel="noopener noreferrer" className="hover:text-[#A9746E] transition duration-300">
               LinkedIn
             </a>
-            <a
-              href="https://twitter.com/sopiah"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#A9746E] transition duration-300"
-            >
+            <a href="https://twitter.com/sopiah" target="_blank" rel="noopener noreferrer" className="hover:text-[#A9746E] transition duration-300">
               Twitter
             </a>
           </div>

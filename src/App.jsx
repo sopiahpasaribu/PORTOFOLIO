@@ -19,7 +19,7 @@ function App() {
         >
           <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
             <img
-              src="publik/1.jpg"
+              src="public/1.jpg"
               alt="Sopiah Profile"
               className="w-40 h-40 rounded-full object-cover shadow-lg"
             />
@@ -51,7 +51,7 @@ function App() {
   <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12 text-[#f5e5d1]">
     {/* FOTO */}
     <img
-      src="publik/aboutme.jpg"
+      src="public/aboutme.jpg"
       alt="About Sopiah"
       className="w-64 h-64 object-cover rounded-md shadow-lg"
     />

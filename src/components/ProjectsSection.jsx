@@ -232,11 +232,11 @@ const ProjectsSection = () => {
   title: "Piam Booking",
   desc: "A comprehensive hotel booking platform with search, filters, and reservation management.",
   images: [
-    "public/home-booking.jpg",
-    "public/login-piam-booking.jpg",
-    "public/booking.jpg",
-    "public/about-piam-booking.jpg",
-    "public/hotel.jpg"
+    "/home-booking.jpg",
+    "/login-piam-booking.jpg",
+    "/booking.jpg",
+    "/about-piam-booking.jpg",
+    "/hotel.jpg"
   ],
   tech: ["React", "Node.js", "MongoDB", "Express", "Styled Components", "React Dates"],
   features: [
@@ -259,11 +259,11 @@ const ProjectsSection = () => {
       title: "Wizarding World",
       desc: "An application to discover recipes based on ingredients you have, with step-by-step cooking instructions.",
       images: [
-        "public/home-ww.jpg",
-        "public/discover-ww.jpg",
-        "public/about-ww.jpg",
-        "public/potion-ww.jpg",
-        "public/book-ww.jpg"
+        "/home-ww.jpg",
+        "/discover-ww.jpg",
+        "/about-ww.jpg",
+        "/potion-ww.jpg",
+        "/book-ww.jpg"
 
       ],
       tech: ["Html", "Css", "JavaScript"],

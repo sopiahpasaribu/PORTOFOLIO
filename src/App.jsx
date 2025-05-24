@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProjectsSection from "./components/ProjectsSection"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,27 +12,6 @@ function App() {
       once: true,
     });
   }, []);
-
-  const projects = [
-    {
-      title: "Portfolio Website",
-      desc: "A personal portfolio to showcase my projects and skills.",
-      tech: ["React", "TailwindCSS"],
-      link: "https://github.com/sopiah/portfolio",
-    },
-    {
-      title: "E-commerce Site",
-      desc: "An online store with full shopping cart functionality.",
-      tech: ["React", "Redux", "Firebase"],
-      link: "https://github.com/sopiah/ecommerce",
-    },
-    {
-      title: "Blog Platform",
-      desc: "A responsive blog platform with markdown support.",
-      tech: ["Next.js", "TailwindCSS", "MongoDB"],
-      link: "https://github.com/sopiah/blog",
-    },
-  ];
 
   return (
     <div className="relative font-sans text-gray-800">
@@ -98,8 +78,8 @@ function App() {
                 About Me
               </h2>
               <p className="text-sm text-[#f5e5d1] leading-relaxed mb-6">
-                My name is Sopiah. I’m a React Developer with over 2 years of experience
-                building modern web apps. I’m very passionate and dedicated to my work. I
+                My name is Sopiah. I'm a React Developer with over 2 years of experience
+                building modern web apps. I'm very passionate and dedicated to my work. I
                 have acquired the skills necessary to build clean, premium, and responsive
                 websites.
               </p>
@@ -123,49 +103,7 @@ function App() {
         </section>
 
         {/* Projects Section */}
-        <section
-          id="projects"
-          className="min-h-screen flex flex-col justify-center items-center text-center px-4"
-          data-aos="fade-up"
-        >
-          <h2 className="text-4xl font-display font-bold text-[#6B4C3B] mb-8">
-            Projects
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl">
-            {projects.map(({ title, desc, tech, link }, index) => (
-              <div
-                key={index}
-                className="bg-[#F5F0E6] rounded-xl shadow-md p-6 hover:shadow-lg transition flex flex-col justify-between"
-                data-aos="fade-up"
-              >
-                <div>
-                  <h3 className="text-xl font-semibold text-[#6B4C3B] mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-[#7B6F61] text-sm mb-3">{desc}</p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {tech.map((t, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-[#D6C4B7] text-[#6B4C3B] font-semibold px-2 py-1 rounded-full"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-block text-[#6B4C3B] font-semibold hover:underline"
-                >
-                  View Project &rarr;
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProjectsSection />
 
         {/* Contact Section */}
         <section

@@ -14,21 +14,44 @@ function App() {
   }, []);
 
   return (
-    <div className="relative font-sans text-gray-800">
+    <div className="relative font-sans text-gray-800 bg-[#fffefc]">
       <Navbar />
 
       <main className="pt-24 px-6 space-y-32">
+
         {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen flex flex-col justify-center items-center text-center"
-          style={{
-            backgroundColor: "#E9E1D1",
-            transition: "all 0.5s ease",
-          }}
+          className="min-h-screen flex flex-col justify-center items-center text-center relative"
           data-aos="fade-up"
         >
-          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+          {/* Background Image with Edge Blur Only */}
+          <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+            {/* Main Background Image (clear center) */}
+            <div 
+              className="absolute inset-0 w-full h-full"
+              style={{
+                backgroundImage: "url('/background (2).jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                maskImage: "radial-gradient(circle at center, black 60%, transparent 90%)",
+                WebkitMaskImage: "radial-gradient(circle at center, black 60%, transparent 90%)",
+              }}
+            ></div>
+            
+            {/* Blurred Edge Overlay */}
+            <div 
+              className="absolute inset-0 w-full h-full backdrop-blur-sm"
+              style={{
+                maskImage: "radial-gradient(circle at center, transparent 60%, black 90%)",
+                WebkitMaskImage: "radial-gradient(circle at center, transparent 60%, black 90%)",
+              }}
+            ></div>
+          </div>
+          
+          {/* Content */}
+          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl z-10 p-8 bg-white/80 backdrop-blur-sm rounded-xl mx-4 shadow-lg">
             <img
               src="/1.jpg"
               alt="Sopiah Profile"
@@ -44,60 +67,8 @@ function App() {
                 <span className="text-[#6B4C3B] font-semibold">
                   Frontend Developer
                 </span>{" "}
-                specializing in React, HTML, CSS, and JavaScript. I create modern,
-                responsive, and user-friendly web applications that deliver great
-                experiences.
+                specializing in React, HTML, CSS, and JavaScript.
               </p>
-              <p className="text-[#7B6F61] max-w-xl">
-                With a keen eye for design and detail, I enjoy transforming ideas
-                into functional websites and apps that users love.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section
-          id="about"
-          className="min-h-screen flex items-center justify-center bg-[#3e2c23] px-6 py-16"
-          data-aos="fade-up"
-        >
-          <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12 text-[#f5e5d1]">
-            <img
-              src="/aboutme.jpg"
-              alt="About Sopiah"
-              className="w-64 h-64 object-cover rounded-md shadow-lg"
-              data-aos="zoom-in"
-            />
-
-            <div className="flex-1">
-              <p className="text-[#d1a374] uppercase text-sm font-semibold mb-1">
-                Discover
-              </p>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                About Me
-              </h2>
-              <p className="text-sm text-[#f5e5d1] leading-relaxed mb-6">
-                My name is Sopiah. I'm a React Developer with over 2 years of experience
-                building modern web apps. I'm very passionate and dedicated to my work. I
-                have acquired the skills necessary to build clean, premium, and responsive
-                websites.
-              </p>
-
-              <div className="text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 border border-[#d1a374] p-6 mb-6">
-                <p><span className="font-semibold">Name:</span> Sopiah Pasaribu</p>
-                <p><span className="font-semibold">Age:</span> 21</p>
-                <p><span className="font-semibold">Phone:</span> +62 831-3591-0632</p>
-                <p><span className="font-semibold">Address:</span> Bandung, Indonesia</p>
-                <p><span className="font-semibold">Experience:</span> 2 Years</p>
-                <p><span className="font-semibold">Freelance:</span> Available</p>
-                <p><span className="font-semibold">Skype:</span> sopiah.dev</p>
-                <p><span className="font-semibold">GitHub:</span> github.com/sopiah</p>
-              </div>
-
-              <button className="bg-[#d1a374] text-[#3e2c23] font-display text-sm font-semibold px-6 py-3 rounded hover:bg-[#b98d5c] transition">
-                Download CV
-              </button>
             </div>
           </div>
         </section>
@@ -108,7 +79,7 @@ function App() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="min-h-screen flex flex-col justify-center items-center text-center px-6 sm:px-12"
+          className="min-h-screen flex flex-col justify-center items-center text-center px-6 sm:px-12 bg-[#E9E1D1]"
           data-aos="fade-up"
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#6B4C3B] mb-6">

@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Shopia Storee",
     desc: "A full-featured online store with product listings, cart functionality, and a secure checkout process.",
     images: [
-      "/ecommerce-home.jpg",
-      "/ecommerce-product.jpg",
-      "/ecommerce-cart.jpg",
-      "/ecommerce-checkout.jpg"
+      "/homess.png",
+      "/produkss.png",
+      "/loginss.png",
+      "/aboutss.png"
     ],
     tech: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "JWT", "Express"],
     features: [

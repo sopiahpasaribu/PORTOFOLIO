@@ -161,7 +161,7 @@ const ProjectModal = ({ project, onClose }) => {
                 </div>
               </div>
 
-{/* Action Buttons - Compact Version */}
+{/* Action Buttons  */}
 <div className="flex flex-wrap gap-3 pt-3">
   {project.githubLink && (
     <a

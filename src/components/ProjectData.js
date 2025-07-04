@@ -1,31 +1,32 @@
 export const projects = [
-  {
-    title: "Shopia Storee",
-    desc: "A full-featured online store with product listings, cart functionality, and a secure checkout process.",
-    images: [
-      "/homess.png",
-      "/produkss.png",
-      "/loginss.png",
-      "/aboutss.png"
-    ],
-    tech: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "JWT", "Express"],
-    features: [
-      "Product catalog with advanced filters and search functionality",
-      "User authentication and profile management",
-      "Shopping cart and wishlist system",
-      "Secure online payments with Stripe integration",
-      "Order tracking and purchase history",
-      "Admin dashboard for product and order management"
-    ],
-    challenges: [
-      "Implemented real-time inventory updates to prevent overselling",
-      "Optimized image loading using lazy loading for improved performance",
-      "Developed a fully responsive design across all devices",
-      "Managed complex state using Redux efficiently"
-    ],
-    githubLink: "https://github.com/sopiah/ecommerce",
-    vercelLink: "https://ecommerce-sopiah.vercel.app"
-  },
+{
+  "title": "Shopia Store Admin Dashboard",
+  "desc": "Exclusive admin panel for managing Shopia Storee online shop with product CRUD, categories, and store information management.",
+  "images": [
+    "/homess.png",
+    "/produkss.png",
+    "/loginss.png",
+    "/aboutss.png"
+  ],
+  "tech": ["React", "Node.js", "PostgreSQL", "Redux", "Multer", "JWT", "Express"],
+  "features": [
+    "Complete product management (CRUD operations)",
+    "Product categories organization",
+    "Store information management page",
+    "Image upload handling with Multer",
+    "JWT authentication for secure admin access",
+    "Responsive admin interface"
+  ],
+  "challenges": [
+    "Implemented efficient image handling with Multer",
+    "Migrated from MongoDB to PostgreSQL for data storage",
+    "Developed complex product-category relationships",
+    "Managed file uploads and storage for product images",
+    "Created responsive admin UI for all devices"
+  ],
+  "githubLink": "https://github.com/sopiah/ecommerce",
+  "vercelLink": "https://ecommerce-sopiah.vercel.app"
+},
   {
     title: "Piam Booking",
     desc: "An online hotel booking system that allows users to reserve rooms and pay directly at the hotel during check-in.",

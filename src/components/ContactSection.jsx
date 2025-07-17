@@ -66,7 +66,7 @@ const ContactSection = () => {
             Send Email
           </a>
           <a
-            href="/CV-SOPIAH.pdf"
+            href="/CV_SOPIAH_PASARIBU.pdf"
             download
             className="border-2 border-[#6B4C3B] text-[#6B4C3B] hover:bg-[#6B4C3B] hover:text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 text-lg font-semibold flex items-center gap-2"
             data-aos="zoom-in"

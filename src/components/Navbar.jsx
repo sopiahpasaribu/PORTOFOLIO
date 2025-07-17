@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { Home, User, FolderGit2, Mail, Menu, X } from "lucide-react";
+import { Home, FolderGit2, Briefcase, Cpu, Mail, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home");
 
-  const navLinks = [
-    { href: "#home", icon: <Home className="w-5 h-5" />, label: "Home" },
-    // { href: "#about", icon: <User className="w-5 h-5" />, label: "About" },
-    { href: "#projects", icon: <FolderGit2 className="w-5 h-5" />, label: "Projects" },
-    { href: "#contact", icon: <Mail className="w-5 h-5" />, label: "Contact" },
-  ];
+const navLinks = [
+  { href: "#home", icon: <Home className="w-5 h-5" />, label: "Home" },
+  { href: "#projects", icon: <FolderGit2 className="w-5 h-5" />, label: "Projects" },
+  { href: "#experience", icon: <Briefcase className="w-5 h-5" />, label: "Experience" },
+  { href: "#skills", icon: <Cpu className="w-5 h-5" />, label: "Skills" },
+  { href: "#contact", icon: <Mail className="w-5 h-5" />, label: "Contact" },
+];
+
 
   const handleLinkClick = (href) => {
     setActiveLink(href);

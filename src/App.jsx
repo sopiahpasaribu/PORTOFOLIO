@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import HomeSection from "./components/HomeSection";
-import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
-import ExperienceSection from "./components/ExperienceSection";
-import ContactSection from "./components/ContactSection";
+import HomeSection from "./pages/HomeSection";
+import ProjectsSection from "./pages/ProjectsSection";
+import SkillsSection from "./pages/SkillsSection";
+import ExperienceSection from "./pages/ExperienceSection";
+import ContactSection from "./pages/ContactSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

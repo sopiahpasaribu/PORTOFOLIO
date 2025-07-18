@@ -16,11 +16,16 @@ export default {
       },
       animation: {
         'fade-slide': 'fadeSlide 0.5s ease-out',
+        'blink': 'blink 1s step-start infinite',  // ← tambahkan ini
       },
       keyframes: {
         fadeSlide: {
           '0%': { opacity: 0, transform: 'translateY(50px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        blink: {  // ← tambahkan ini
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0 },
         },
       },
     },

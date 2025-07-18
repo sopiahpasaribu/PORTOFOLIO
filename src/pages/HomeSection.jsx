@@ -4,13 +4,6 @@ const HomeSection = () => {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const fullText = "Hello, I'm Sopiah";
-  const subTexts = [
-    "Frontend Developer",
-    "UI/UX Enthusiast",
-    "Web Designer",
-    "React Specialist"
-  ];
-  const [currentSubText, setCurrentSubText] = useState(0);
 
   // Typewriter effect
   useEffect(() => {
@@ -21,7 +14,6 @@ const HomeSection = () => {
         i++;
       } else {
         clearInterval(typing);
-        // Start cursor blink after typing completes
         const cursorInterval = setInterval(() => {
           setShowCursor(prev => !prev);
         }, 500);
@@ -32,21 +24,13 @@ const HomeSection = () => {
     return () => clearInterval(typing);
   }, []);
 
-  // Rotating subtitle effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSubText((prev) => (prev + 1) % subTexts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col justify-center items-center text-center relative"
       data-aos="fade"
     >
-      {/* Original background styling */}
+      {/* Background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <div 
           className="absolute inset-0 w-full h-full"
@@ -69,7 +53,6 @@ const HomeSection = () => {
           }}
         ></div>
 
-        {/* Added animated particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
             <div 
@@ -87,10 +70,9 @@ const HomeSection = () => {
           ))}
         </div>
       </div>
-      
-      {/* Content container */}
+
+      {/* Content */}
       <div className="flex flex-col md:flex-row items-center gap-6 max-w-4xl z-10 p-6 bg-white/80 backdrop-blur-sm rounded-xl mx-4 shadow-lg">
-        {/* Replaced profile image with animated GIF icon */}
         <div className="relative group w-32 h-32 flex items-center justify-center">
           <div 
             className="w-full h-full rounded-full bg-[#6B4C3B]/10 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:bg-[#6B4C3B]/20"
@@ -122,26 +104,17 @@ const HomeSection = () => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            I'm a passionate {" "}
-            <span 
-              className="text-[#6B4C3B] font-semibold relative inline-block"
-              key={currentSubText}
-            >
-              <span className="relative">
-                {subTexts[currentSubText]}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#6B4C3B] animate-[underline_0.3s_forwards]"></span>
-              </span>
-            </span>{" "}
-            with expertise in modern web technologies.
+            I'm a passionate programmer specializing in <span className="font-semibold text-[#6B4C3B]">React</span>, <span className="font-semibold text-[#6B4C3B]">Java</span>, and <span className="font-semibold text-[#6B4C3B]">Node.js</span>.
           </p>
           
-          <button
+          <a
+            href="#contact"
             className="mt-4 px-4 py-2 bg-[#6B4C3B] text-white rounded-lg text-sm font-medium hover:bg-[#5A3E30] transition-all duration-300"
             data-aos="fade-up"
             data-aos-delay="700"
           >
             Contact Me
-          </button>
+          </a>
         </div>
       </div>
 
@@ -167,10 +140,6 @@ const HomeSection = () => {
           0% { transform: translateY(0) translateX(0); }
           50% { transform: translateY(-100px) translateX(20px); }
           100% { transform: translateY(-200px) translateX(0); }
-        }
-        @keyframes underline {
-          from { transform: scaleX(0); }
-          to { transform: scaleX(1); }
         }
         @keyframes scroll {
           0% { transform: translateY(0); opacity: 1; }

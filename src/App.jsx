@@ -25,9 +25,9 @@ function App() {
       
       <main className="px-6 space-y-32">
         <HomeSection />
-        <ProjectsSection />
         <SkillsSection />
         <ExperienceSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
 

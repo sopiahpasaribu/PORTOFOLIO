@@ -48,28 +48,28 @@ const ProjectModal = ({ project, onClose }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6">
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="relative rounded-xl overflow-hidden bg-[#faf5eb] h-96 flex items-center justify-center">
+              <div className="relative rounded-xl overflow-hidden bg-[#faf5eb] h-80 sm:h-96 flex items-center justify-center">
                 <img
                   src={project.images[currentImageIndex]}
                   alt={`Project Screenshot ${currentImageIndex + 1}`}
-                  className="max-h-full max-w-full object-contain p-4"
+                  className="max-h-[90vh] w-auto max-w-full object-contain p-2 sm:p-4"
                 />
                 
                 {project.images.length > 1 && (
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 text-[#644a33] p-2 rounded-full shadow-lg hover:bg-[#f0e6dd] transition-all"
+                      className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 text-[#644a33] p-1 sm:p-2 rounded-full shadow-lg hover:bg-[#f0e6dd] transition-all"
                       aria-label="Previous image"
                     >
-                      <ChevronLeft className="w-6 h-6" />
+                      <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 text-[#644a33] p-2 rounded-full shadow-lg hover:bg-[#f0e6dd] transition-all"
+                      className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 text-[#644a33] p-1 sm:p-2 rounded-full shadow-lg hover:bg-[#f0e6dd] transition-all"
                       aria-label="Next image"
                     >
-                      <ChevronRight className="w-6 h-6" />
+                      <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                   </>
                 )}
@@ -94,7 +94,7 @@ const ProjectModal = ({ project, onClose }) => {
                       <img
                         src={img}
                         alt={`Thumbnail ${i + 1}`}
-                        className="w-full h-20 object-cover"
+                        className="w-full h-16 sm:h-20 object-cover"
                       />
                     </button>
                   ))}
@@ -161,29 +161,29 @@ const ProjectModal = ({ project, onClose }) => {
                 </div>
               </div>
 
-{/* Action Buttons  */}
-<div className="flex flex-wrap gap-3 pt-3">
-  {project.githubLink && (
-    <a
-      href={project.githubLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex-1 flex items-center justify-center bg-[#8b6644] text-white px-4 py-2 rounded-md hover:bg-[#77583c] transition-all text-sm font-medium shadow hover:shadow-md min-w-[160px]"
-    >
-      <Github className="w-4 h-4 mr-2" /> View Code
-    </a>
-  )}
-  {project.vercelLink && (
-    <a
-      href={project.vercelLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex-1 flex items-center justify-center bg-[#644a33] text-white px-4 py-2 rounded-md hover:bg-[#77583c] transition-all text-sm font-medium shadow hover:shadow-md min-w-[160px]"
-    >
-      <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
-    </a>
-  )}
-</div>
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-3 pt-3">
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#8b6644] text-white px-4 py-2 rounded-md hover:bg-[#77583c] transition-all text-sm font-medium shadow hover:shadow-md min-w-[160px]"
+                  >
+                    <Github className="w-4 h-4 mr-2" /> View Code
+                  </a>
+                )}
+                {project.vercelLink && (
+                  <a
+                    href={project.vercelLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center bg-[#644a33] text-white px-4 py-2 rounded-md hover:bg-[#77583c] transition-all text-sm font-medium shadow hover:shadow-md min-w-[160px]"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

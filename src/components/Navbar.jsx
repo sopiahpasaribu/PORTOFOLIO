@@ -7,9 +7,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#home", icon: <Home className="w-5 h-5" />, label: "Home" },
-    { href: "#projects", icon: <FolderGit2 className="w-5 h-5" />, label: "Projects" },
-    { href: "#experience", icon: <Briefcase className="w-5 h-5" />, label: "Experience" },
     { href: "#skills", icon: <Cpu className="w-5 h-5" />, label: "Skills" },
+    { href: "#experience", icon: <Briefcase className="w-5 h-5" />, label: "Experience" },
+    { href: "#projects", icon: <FolderGit2 className="w-5 h-5" />, label: "Projects" },
     { href: "#contact", icon: <Mail className="w-5 h-5" />, label: "Contact" },
   ];
 

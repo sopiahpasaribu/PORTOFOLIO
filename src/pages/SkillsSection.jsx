@@ -104,10 +104,12 @@ const SkillsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
+        <a href="#projects">
           <button className="px-6 py-2.5 bg-[#D4B483] text-[#5A4A42] rounded-full font-medium hover:bg-[#C4A473] transition-colors shadow-sm hover:shadow-md flex items-center gap-2 mx-auto text-sm">
             <Rocket className="w-4 h-4 text-[#5A4A42]" />
             See My Projects
           </button>
+        </a>
         </div>
       </div>
     </section>

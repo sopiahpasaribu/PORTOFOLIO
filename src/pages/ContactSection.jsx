@@ -97,7 +97,7 @@ const ContactSection = () => {
               </a>
               
               <a
-                href="/CV_SOPIAH_PASARIBU.pdf"
+                href="/CV_Sopiah_Pasaribu.pdf"
                 download
                 className="flex-1 border-2 border-[#6B4C3B] text-[#6B4C3B] hover:bg-[#6B4C3B] hover:text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg transition-all duration-300 text-sm sm:text-base font-semibold flex items-center justify-center gap-2 hover:scale-105 transform"
                 data-aos="zoom-in"

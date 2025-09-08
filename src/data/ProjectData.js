@@ -81,5 +81,67 @@ export const projects = [
     ],
     githubLink: "https://github.com/sopiahpasaribu/SOPIAH_PSB",
     vercelLink: "https://wizarding-world-one.vercel.app/"
-  }
+  },
+{
+  title: "🐾 PetCare",
+  desc: "PetCare is a pet care service application that allows users to easily book services with a 'Book Now, Pay Later' feature. The app supports two types of users: User and Admin.",
+  images: [
+    "/login-petcare.jpg",
+    "/home-petcare.jpg",
+    "/pet-petcare.jpg",
+    "/service-petcare.jpg",
+    "/booking-petcare.jpg",
+    "/about-petcare.jpg",
+    "/admin-petcare.jpg",
+    "/admin-booking-petcare.jpg"
+  ],
+  tech: [ "Spring Boot", "PostgreSQL", "JWT", "React", "Tailwind CSS" ],
+  features: [
+    "Add pets to receive services",
+    "Choose services such as grooming, health consultation, vaccination, and pet boarding",
+    "Book Now, Pay Later with booking status flow (PENDING → CONFIRMED → PAID)",
+    "Edit user profile (name, phone number)",
+    "Admin can add and manage services",
+    "Admin can monitor, confirm, and update booking status (PENDING → CONFIRMED → COMPLETE → REJECT)",
+    "Search & Sort feature to quickly find bookings or services"
+  ],
+  challenges: [
+    "Implemented the 'Book Now, Pay Later' booking flow",
+    "Handled role-based authentication for Users and Admins using JWT",
+    "Designed a responsive UI optimized for both desktop and mobile",
+    "Built a backend system that manages bookings with dynamic status updates including COMPLETE and REJECT"
+  ],
+  githubLink: "https://github.com/sopiahpasaribu/PETCARE"
+},
+{
+  "title": "🏦 Cooperative System",
+  "desc": "Cooperative System is a PHP and MySQL-based application with a Bootstrap interface, running on XAMPP. It is designed to help manage cooperative data such as members, savings, loans, and installments through an admin dashboard.",
+  "images": [
+    "/login-coop.jpg",
+    "/dashboard-coop.jpg",
+    "/members-coop.jpg",
+    "/add-coop.jpg",
+    "/kelola-coop.jpg",
+    "/form-angs-coop.jpg",
+     "/riwayat-angs-coop.jpg"
+
+  ],
+  "tech": ["PHP", "MySQL", "Bootstrap", "XAMPP"],
+  "features": [
+    "👨‍💼 Admin: Log in as admin, view admin account details, manage members, savings, loans, and installments",
+    "👥 Members: Add new member data (required before savings/loans)",
+    "💰 Savings: Admin can add member savings data, display savings history",
+    "📄 Loans: Admin can add member loans (only for registered members)",
+    "💳 Installments: Manage loan installment payments, display installment details"
+  ],
+  "challenges": [
+    "Implementing relationships between members, savings, loans, and installments",
+    "Validation so only registered members can make savings/loans",
+    "Designing loan repayment flows with installment history",
+    "Building a simple yet informative UI with Bootstrap"
+  ],
+  "githubLink": "https://github.com/sopiahpasaribu/Project-Koperasi-Kelompok5"
+}
+
+
 ];

@@ -3,9 +3,20 @@ import { Heart } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#E9E1D1] text-[#6B4C3B] py-6 mt-16 border-t border-[#d6c4aa] text-center text-sm">
+    <footer
+      className="
+        bg-[#E9E1D1] dark:bg-[#1E1A17]
+        text-[#6B4C3B] dark:text-[#E6DED5]
+        py-6 mt-16
+        border-t border-[#d6c4aa] dark:border-[#3A312C]
+        text-center text-sm
+        transition-colors duration-300
+      "
+    >
       <p className="flex items-center justify-center gap-1">
-        Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Sopiah &copy; {new Date().getFullYear()}
+        Made with
+        <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+        by Sopiah &copy; {new Date().getFullYear()}
       </p>
     </footer>
   );

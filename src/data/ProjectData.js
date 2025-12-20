@@ -1,6 +1,6 @@
 export const projects = [
 {
-  "title": "Shopia Store Admin Dashboard",
+  "title": "Shopia Store",
   "desc": "Exclusive admin panel for managing Shopia Storee online shop with product CRUD, categories, and store information management.",
   "images": [
     "/homess.png",

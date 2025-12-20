@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import HomeSection from "./pages/HomeSection";
+import AboutSection from "./pages/AboutSection"; 
 import ProjectsSection from "./pages/ProjectsSection";
 import SkillsSection from "./pages/SkillsSection";
-import ExperienceSection from "./pages/ExperienceSection";
 import ContactSection from "./pages/ContactSection";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,19 +17,26 @@ function App() {
       duration: 1000,
       once: false,
       mirror: true,
-      easing: 'ease-out-back',
+      easing: "ease-out-back",
     });
   }, []);
 
   return (
-    <div className="relative font-sans text-gray-800 bg-[#fffefc]">
+    <div
+      className="
+        relative font-sans
+        text-gray-800 dark:text-gray-100
+        bg-[#fffefc] dark:bg-[#1E1A17]
+        transition-colors duration-300
+      "
+    >
       <Navbar />
-      
+
       <main className="px-6 space-y-32">
         <HomeSection />
-        <SkillsSection />
-        <ExperienceSection />
+        <AboutSection />
         <ProjectsSection />
+        <SkillsSection />
         <ContactSection />
       </main>
 

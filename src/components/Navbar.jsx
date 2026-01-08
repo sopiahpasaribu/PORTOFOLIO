@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Home,
   User,
@@ -46,8 +46,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 h-16 px-6 flex justify-between items-center backdrop-blur-md bg-white/80 dark:bg-[#2A2420]/80 border-b border-[#E6DACE] dark:border-[#3A312C] transition-colors">
-                <a
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 right-0 z-40 h-16 px-6 flex justify-between items-center backdrop-blur-md bg-white/80 dark:bg-[#2A2420]/80 border-b border-[#E6DACE] dark:border-[#3A312C] transition-colors">
+        <a
           href="#home"
           onClick={() => handleLinkClick("#home")}
           className="font-display font-bold text-2xl text-[#6B4C3B] dark:text-[#F3EDE7]"
@@ -98,15 +99,17 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* OVERLAY MOBILE - DIUBAH Z-INDEX */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+          className="fixed inset-0 z-30 bg-black/40 backdrop-blur-sm md:hidden"
         />
       )}
 
+      {/* MOBILE MENU - DIUBAH Z-INDEX */}
       <div
-        className={`fixed top-16 left-0 right-0 z-50 px-6 py-4 bg-white dark:bg-[#2A2420] transition-all duration-300 md:hidden ${
+        className={`fixed top-16 left-0 right-0 z-40 px-6 py-4 bg-white dark:bg-[#2A2420] transition-all duration-300 md:hidden ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-10 pointer-events-none"

@@ -14,10 +14,13 @@ import "aos/dist/aos.css";
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: "ease-out-back",
+      duration: 700,              // Lebih cepat & smooth
+      easing: "ease-out-cubic",    // Natural, tidak mantul
+      once: true,                 // Jalan sekali → ringan
+      mirror: false,              // Tidak animasi ulang saat scroll naik
+      offset: 80,                 // Muncul sedikit sebelum terlihat
+      delay: 0,
+      anchorPlacement: "top-bottom",
     });
   }, []);
 
